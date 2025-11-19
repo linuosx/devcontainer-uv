@@ -1,0 +1,26 @@
+{
+    "name": "${localWorkspaceFolderBasename}",
+    "dockerComposeFile": "docker-compose.yml",
+    "service": "app",
+    "workspaceFolder": "/workspace/${localWorkspaceFolderBasename}",
+    "customizations": {
+        "vscode": {
+            "settings": {
+                "terminal.integrated.shell.linux": "/bin/zsh",
+                "python.defaultInterpreterPath": "~/.virtualenvs/uv/bin/python"
+            },          
+            "extensions": [
+                "oliversturm.fix-json",
+                "ms-python.python",
+                "ms-python.vscode-pylance",
+                "ms-azuretools.vscode-docker",
+                "mechatroner.rainbow-csv",
+                "ms-toolsai.datawrangler",
+                "IronGeek.vscode-env",
+	            "github.copilot",
+                "ms-toolsai.jupyter"
+            ]
+        }
+    },
+    "postCreateCommand": "/bin/zsh -c '[[ ! -f uv.lock ]] || uv sync'"
+}
